@@ -1,0 +1,32 @@
+body {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: grid;
+    gap: 10px;
+}
+
+.box img {
+    object-fit: cover;
+    width: 100%;
+    border-radius: 5px;
+}
+
+@media screen and (min-width: 768px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .box-two {
+        grid-column: 2 / 4;
+        grid-row: 1 / 3;
+    }
+}
